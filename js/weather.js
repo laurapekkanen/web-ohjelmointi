@@ -1,18 +1,18 @@
 var Weather = React.createClass({
 
-    $(document).ready(function(){
+    getWeather: function(){
         $.ajax({
             url: "http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139",
-            cache: false
-        }).done(function(data) {
-            console.log("done");
-            showWeather(data);        
-        }).fail(function() {
-            console.log("error");
-        }).always(function() {
-            console.log("complete");
+            cache: false,
+            dataType: 'json',
+            success: function(data) {
+                this.setState({datas: data});
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.log('VIRHE: ', status, err.toString());
+            }.bind(this),
         });
-    });
+    },
 
     function showWeather(data) {
         $.each(data.weather, function(index, weather) {
