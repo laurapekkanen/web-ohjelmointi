@@ -33,18 +33,23 @@
 var Weather = React.createClass({
     getWeather: function(){
         $.ajax({
-            url: "http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139",
-            cache: false,
+            url: 'weather.json',
+            cache: true,
+            method: 'get',
             dataType: 'json',
             success: function(data) {
-                this.showWeather({datas: data});
+                this.setState({datas: data});
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log('VIRHE: ', status, err.toString());
             }.bind(this),
         });
     },
+    
 
+    componentDidMount: function() {
+        this.getWeather();
+    },
     
     render: function() {
         return (
