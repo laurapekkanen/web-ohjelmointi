@@ -1,0 +1,14 @@
+Perus s‰‰:
+Instantaneous Weather Observations (fmi::observations::weather::simple)
+Possible query parameters:
+starttime
+endtime
+timestep
+parameters
+crs
+bbox
+place
+fmisid
+maxlocations
+geoid
+wmo
