@@ -1,6 +1,6 @@
 //haetaan json
 //JSOOON
-function loadJSON() {
+/*function loadJSON() {
 	ajax("http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139", function(response) {
 		//console.log("response = " + response);
 		// create a json object
@@ -82,6 +82,16 @@ function saveJson(data){
   };
 }
 
-//tai jtn
+//tai jtn*/
 
 
+function insertReply(content) {
+    document.getElementById('output').innerHTML = content;
+}
+
+// create script element
+var script = document.createElement('script');
+// assing src with callback name
+script.src = 'http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139';
+// insert script to document and load content
+document.content.appendChild(script);

@@ -3,3 +3,5 @@ de1abf67dd420d2455bc69e2ceb2a139
 
 showWeather reactiin
 json studentille, että ajax lukee sen sieltä
+
+http://student.labranet.jamk.fi/~ara/saa.txt
