@@ -1,5 +1,7 @@
 //haetaan json
 //JSOOON
+var weather = new Array();
+
 function loadJSON() {
 	ajax("http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139", function(response) {
 		//console.log("response = " + response);
@@ -64,7 +66,7 @@ function showWeather(index) {
 }
 
 //tää yrittäis tallentaa sen tiedostoon...
-function saveJson(data){
+/*function saveJson(data){
  var textFile = null,
   makeTextFile = function (text) {
     var data = new Blob([text], {type: 'text/plain'});
@@ -80,7 +82,7 @@ function saveJson(data){
     // returns a URL you can use as a href
     return textFile;
   };
-}
+}*/
 
 //tai jtn
 
