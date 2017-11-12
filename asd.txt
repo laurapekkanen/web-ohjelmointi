@@ -1,7 +1,12 @@
-open weather api
+﻿open weather api
 de1abf67dd420d2455bc69e2ceb2a139
 
 showWeather reactiin
 json studentille, että ajax lukee sen sieltä
 
 http://student.labranet.jamk.fi/~ara/saa.txt
+
+CORS ja JSONP
+http://netisto.fi/oppaat/html5/10.html noin sivun keskivaiheilla: JSON-datan lataamisesta AJAXilla
+http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
+http://en.wikipedia.org/wiki/JSONP
