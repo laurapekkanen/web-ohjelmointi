@@ -85,12 +85,12 @@ function showWeather(index) {
 
     // returns a URL you can use as a href
     return textFile;
-  };
+/*  };
 }*/
 
 //tai jtn*/
 
-
+/*
 function insertReply(content) {
     document.getElementById('output').innerHTML = content;
 }
@@ -101,3 +101,5 @@ var script = document.createElement('script');
 script.src = 'http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139';
 // insert script to document and load content
 document.content.appendChild(script);
+*/
+ 
