@@ -1,10 +1,8 @@
 //haetaan json
 //JSOOON
-<<<<<<< HEAD
 var weather = new Array();
 
 function loadJSON() {
-=======
 /*function loadJSON() {
 >>>>>>> 9b2e72fd052c12c677eb657f496a62f71b863771
 	ajax("http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139", function(response) {
