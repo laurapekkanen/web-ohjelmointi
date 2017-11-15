@@ -50,30 +50,6 @@ fetchJSONFile('weather.json', function(data){
 });  
 */
 
-
-var DaysWeather = React.createClass({
-    render: function() {
-        return (
-            <div>
-                <form>
-                    <input placeholder="Valitse paikkakunta"/>
-                    <button>Hae</button><br/>
-                    <button>Ma {this.props.lat}</button>
-                    <button>Ti</button>
-                    <button>Ke</button>
-                    <button>To</button>
-                    <button>Pe</button>
-                    <button>La</button>
-                    <button>Su</button>
-                    <section id="saa">
-                        tänne sää tiedot?
-                    </section>
-                </form>
-            </div>
-        );
-    }
-});
-
 var Weather = React.createClass({
     
     getInitialState: function() {
@@ -106,27 +82,25 @@ var Weather = React.createClass({
     },
     
     render: function() {
-        /*if (this.state.loading) {
-                    return <span>Ladataan...</span>;
-                }
-                else if (this.state.error !== null) {
-                    return <span>Error: {this.state.error.message}</span>;
-                }
-                else {
-                    var weekWeather = this.state.data.coord(function (coord, index) {
-                        return (
-                            <DaysWeather key={index} talo={talo} />
-                        );
-                    });*/
-                    return (
-                        <main>
-                            <h1>Päivän sää</h1>
-                            {DaysWeather}
-                            {this.props.name} //miksei toimi?
-                        </main>
-                    );
-                }
-    //}
+        return (
+            <div>
+                <form>
+                    <input placeholder="Valitse paikkakunta"/>
+                    <button>Hae</button><br/>
+                    <button>Ma {this.props.lat}</button>
+                    <button>Ti</button>
+                    <button>Ke</button>
+                    <button>To</button>
+                    <button>Pe</button>
+                    <button>La</button>
+                    <button>Su</button>
+                    <section id="saa">
+                        tänne sää tiedot?
+                    </section>
+                </form>
+            </div>
+        );
+}
 });
 
 
