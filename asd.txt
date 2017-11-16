@@ -6,11 +6,12 @@ json studentille, että ajax lukee sen sieltä
 
 http://student.labranet.jamk.fi/~ara/saa.txt
 
-<<<<<<< HEAD
 http://api.openweathermap.org/data/2.5/weather?APPID=95983d94fe41bc5ebaa8e558b25e915f&q=Lahti,Finland&units=metric&cnt=7&lang=en
 =======
 CORS ja JSONP
 http://netisto.fi/oppaat/html5/10.html noin sivun keskivaiheilla: JSON-datan lataamisesta AJAXilla
 http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
 http://en.wikipedia.org/wiki/JSONP
->>>>>>> 233a4d5aaa314688c7cb483ee92a4a9a66e4e0f5
+
+json
+https://stackoverflow.com/questions/40347411/how-to-display-json-data-with-reactjs-in-the-table
