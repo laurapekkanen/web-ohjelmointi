@@ -1,13 +1,3 @@
-//json taso? onko tarpeellinen?
-var cols = [
-    {key: 'coord', label: 'lon', label: 'lat'},
-    {key: 'weather', label: 'id', label: 'main', label: 'description', label: 'icon'},
-    {key: 'base'},
-    {key: 'main', label: 'temp', label: 'pressure', label: 'humidity', label: 'temp_min', label: 'temp_max'},
-    {key: 'visibility'},
-    
-];
-
 // Weather komponentti
 var Weather = React.createClass({
     
@@ -16,7 +6,8 @@ var Weather = React.createClass({
         return {
             loading: true,
             error: null,
-            data: cols
+            mja: 'Arska',
+            datas: null
         };
     },
     
@@ -24,12 +15,15 @@ var Weather = React.createClass({
     getWeather: function(){
         $.ajax({
             url: 'weather.json',
-            cache: true,
+            cache: false,
             method: 'get',
             dataType: 'json',
             success: function(data) {
                 this.setState({datas: data});
+                this.setState({mja: 'Laura'});
                 console.log('JSON loaded');
+                console.log(data);
+                //console.log(data.coord.lon);
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log('VIRHE: ', status, err.toString());
@@ -40,18 +34,18 @@ var Weather = React.createClass({
     //mount
     componentDidMount: function() {
         this.getWeather();
-        //console.log("ggr");
     },
     
     //piirrä nämä
     render: function() {
-        var cols = this.props.cols;
+        //var data = this.props.data;
+        //console.log(data);
         return (
             <div>
                 <form>
                     <input placeholder="Valitse paikkakunta"/>
                     <button>Hae</button><br/>
-                    <button >Ma {this.cols.coord.lat}</button> //miten tänne esitetään? tarvitaanko muuttujia?
+                    <button >{this.state.datas} </button> 
                     <button>Ti</button>
                     <button>Ke</button>
                     <button>To</button>
@@ -64,7 +58,7 @@ var Weather = React.createClass({
                 </form>
             </div>
         );
-}
+    }
 });
 
 ReactDOM.render(

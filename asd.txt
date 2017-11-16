@@ -15,3 +15,5 @@ http://en.wikipedia.org/wiki/JSONP
 
 json
 https://stackoverflow.com/questions/40347411/how-to-display-json-data-with-reactjs-in-the-table
+
+{this.state.mja} {this.state.datas.coord.lat}
