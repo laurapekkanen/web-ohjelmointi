@@ -1,57 +1,26 @@
-/*var Weather = React.createClass({
-
-    getWeather: function(){
-        $.ajax({
-            url: "http://samples.openweathermap.org/data/2.5/weather?id=2172797&appid=de1abf67dd420d2455bc69e2ceb2a139",
-            cache: false,
-            dataType: 'json',
-            success: function(data) {
-                this.showWeather({datas: data});
-            }.bind(this),
-            error: function(xhr, status, err) {
-                console.log('VIRHE: ', status, err.toString());
-            }.bind(this),
-        });
-    },
-
-    showWeather(data) {
-        $.each(data.weather, function(index, weather) {
-            $("#saa").append("<li>"+weather.id+" " +weather.main+ " " + weather.description+"</li>");
-        });
-    }
+//json taso? onko tarpeellinen?
+var cols = [
+    {key: 'coord', label: 'lon', label: 'lat'},
+    {key: 'weather', label: 'id', label: 'main', label: 'description', label: 'icon'},
+    {key: 'base'},
+    {key: 'main', label: 'temp', label: 'pressure', label: 'humidity', label: 'temp_min', label: 'temp_max'},
+    {key: 'visibility'},
     
-   render: function() {
-                return (
-                    <p>{this.props.message}</p>
-                );
-            }
-});*/
+];
 
-     
-function fetchJSONFile(path, callback) {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState === 4) {
-            if (httpRequest.status === 200) {
-                var data = JSON.parse(httpRequest.responseText);
-                if (callback) callback(data);
-            }
-        }
-    };
-    httpRequest.open('GET', path);
-    httpRequest.send(); 
-}
-
-// this requests the file and executes a callback with the parsed result once
-//   it is available
-fetchJSONFile('weather.json', function(data){
-    // do something with your data
-    console.log(data);
-});  
-
-
-
+// Weather komponentti
 var Weather = React.createClass({
+    
+    //intial state
+    getInitialState: function() {
+        return {
+            loading: true,
+            error: null,
+            data: cols
+        };
+    },
+    
+    //hae json ajaxilla
     getWeather: function(){
         $.ajax({
             url: 'weather.json',
@@ -60,6 +29,7 @@ var Weather = React.createClass({
             dataType: 'json',
             success: function(data) {
                 this.setState({datas: data});
+                console.log('JSON loaded');
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log('VIRHE: ', status, err.toString());
@@ -67,18 +37,21 @@ var Weather = React.createClass({
         });
     },
     
-
+    //mount
     componentDidMount: function() {
         this.getWeather();
+        //console.log("ggr");
     },
     
+    //piirrä nämä
     render: function() {
+        var cols = this.props.cols;
         return (
             <div>
                 <form>
                     <input placeholder="Valitse paikkakunta"/>
                     <button>Hae</button><br/>
-                    <button>Ma</button>
+                    <button >Ma {this.cols.coord.lat}</button> //miten tänne esitetään? tarvitaanko muuttujia?
                     <button>Ti</button>
                     <button>Ke</button>
                     <button>To</button>
@@ -91,9 +64,8 @@ var Weather = React.createClass({
                 </form>
             </div>
         );
-    }
+}
 });
-
 
 ReactDOM.render(
     <Weather />, 
