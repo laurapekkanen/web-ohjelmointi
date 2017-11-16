@@ -8,3 +8,4 @@
  "dt":1485789600,"sys":{"type":1,"id":5091,"message":0.0103,"country":"GB","sunrise":1485762037,"sunset":1485794875},
  "id":2643743,"name":"London","cod":200}
 
+http://api.openweathermap.org/data/2.5/weather?APPID=95983d94fe41bc5ebaa8e558b25e915f&q=Lahti,Finland&units=metric&cnt=7&lang=en
