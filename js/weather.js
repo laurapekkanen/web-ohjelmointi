@@ -33,6 +33,11 @@ var Weather = React.createClass({
         this.getWeather();
     },
     
+    //pvm
+    thisDate: function(){
+      moment().format('dddd');  
+    },
+    
     //piirrä nämä
     render: function() {
         //temperature
@@ -56,12 +61,12 @@ var Weather = React.createClass({
                     <input placeholder="Valitse paikkakunta"/>
                     <button>Hae</button><br/>
                     <button >Ma {(new Date().getDate())}.{(new Date().getMonth()+1)}</button> 
-                    <button>Ti{(new Date().getDate()+1)}.{(new Date().getMonth()+1)}</button>
-                    <button>Ke{(new Date().getDate()+2)}.{(new Date().getMonth()+1)}</button>
-                    <button>To{(new Date().getDate()+3)}.{(new Date().getMonth()+1)}</button>
-                    <button>Pe{(new Date().getDate()+4)}.{(new Date().getMonth()+1)}</button>
-                    <button>La{(new Date().getDate()+5)}.{(new Date().getMonth()+1)}</button>
-                    <button>Su{(new Date().getDate()+6)}.{(new Date().getMonth()+1)}</button>
+                    <button>Ti {(new Date().getDate()+1)}.{(new Date().getMonth()+1)}</button>
+                    <button>Ke {(new Date().getDate()+2)}.{(new Date().getMonth()+1)}</button>
+                    <button>To {(new Date().getDate()+3)}.{(new Date().getMonth()+1)}</button>
+                    <button>Pe {(new Date().getDate()+4)}.{(new Date().getMonth()+1)}</button>
+                    <button>La {(new Date().getDate()+5)}.{(new Date().getMonth()+1)}</button>
+                    <button>Su {(new Date().getDate()+6)}.{(new Date().getMonth()+1)}</button>
                     <section id="saa">
                         <p>PVM</p>
                         {(new Date().getDate())}.{(new Date().getMonth()+1)}.{new Date().getFullYear()}

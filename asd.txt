@@ -32,6 +32,9 @@ Hei! Sain noita tulosteltua. Pitäis muuntaa kelvinit celciuksesksi. Se onniistu
 
 Sain ton pvm:n toimimaan new Date()llä. getDate antaa päivän, getMonth kuukauden ja getFullYear vuoden. Kuukauteen pitää plussata yks, en tiedä miksi. En oo kyllä varma toimiiko se kuun vaihteessa, hhmm. Päivään vaan plussa taan 1,2,3 jne. Ne on nyt suoraan tuolla renderin sisällä. Ehkä pitäs tehä funktio niille tms. Tai sit jos ois joku parempi tapa saada pvm näkyviin.
 
+löysin tommisen datepickerin. voiskohan sitä hyodyntää: https://hacker0x01.github.io/react-datepicker/#example-0
+sit kans tommonen: https://momentjs.com/
+
 Tehtävää:
 
 Buttoneille toiminta
