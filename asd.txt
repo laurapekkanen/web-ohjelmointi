@@ -1,4 +1,4 @@
-﻿open weather api
+﻿openweather api
 de1abf67dd420d2455bc69e2ceb2a139
 
 showWeather reactiin
@@ -7,13 +7,34 @@ json studentille, että ajax lukee sen sieltä
 http://student.labranet.jamk.fi/~ara/saa.txt
 
 http://api.openweathermap.org/data/2.5/weather?APPID=95983d94fe41bc5ebaa8e558b25e915f&q=Lahti,Finland&units=metric&cnt=7&lang=en
-=======
-CORS ja JSONP
-http://netisto.fi/oppaat/html5/10.html noin sivun keskivaiheilla: JSON-datan lataamisesta AJAXilla
-http://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-http://en.wikipedia.org/wiki/JSONP
 
 json
 https://stackoverflow.com/questions/40347411/how-to-display-json-data-with-reactjs-in-the-table
 
 {this.state.mja} {this.state.datas.coord.lat}
+
+<form>
+    <input placeholder="Valitse paikkakunta"/>
+    <button>Hae</button><br/>
+    <button >Ma</button> 
+    <button>Ti</button>
+    <button>Ke</button>
+    <button>To</button>
+    <button>Pe</button>
+    <button>La</button>
+    <button>Su</button>
+    <section id="saa">
+
+    </section>
+</form>
+
+Hei! Sain noita tulosteltua. Pitäis muuntaa kelvinit celciuksesksi. Se onniistuu myös laskemalla, jos ei se urli toimi. Onnistuuko sulta se sijainnin haku?
+
+Sain ton pvm:n toimimaan new Date()llä. getDate antaa päivän, getMonth kuukauden ja getFullYear vuoden. Kuukauteen pitää plussata yks, en tiedä miksi. En oo kyllä varma toimiiko se kuun vaihteessa, hhmm. Päivään vaan plussa taan 1,2,3 jne. Ne on nyt suoraan tuolla renderin sisällä. Ehkä pitäs tehä funktio niille tms. Tai sit jos ois joku parempi tapa saada pvm näkyviin.
+
+Tehtävää:
+
+Buttoneille toiminta
+Json urlista
+Paikkatiedot, Google?
+Muotoilut
