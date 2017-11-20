@@ -24,7 +24,7 @@ var Weather = React.createClass({
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log('VIRHE: ', status, err.toString());
-            }.bind(this),
+            }.bind(this)
         });
     },
     
@@ -43,14 +43,14 @@ var Weather = React.createClass({
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
-          Temp = <p>{this.state.datas.main.temp}</p> //celcius = -272.15
+          Temp = <p>{this.state.datas.main.temp}°C</p> //celcius = -272.15
         } else {
           Temp = null;
         }
         //humidity
         var Humi;
         if (this.state.datas !== undefined) {
-          Humi = <p>{this.state.datas.main.humidity}</p>
+          Humi = <p>{this.state.datas.main.humidity}%</p>
         } else {
           Humi = null;
         }
@@ -60,13 +60,14 @@ var Weather = React.createClass({
                 <form>
                     <input placeholder="Valitse paikkakunta"/>
                     <button>Hae</button><br/>
-                    <button >Ma {(new Date().getDate())}.{(new Date().getMonth()+1)}</button> 
-                    <button>Ti {(new Date().getDate()+1)}.{(new Date().getMonth()+1)}</button>
-                    <button>Ke {(new Date().getDate()+2)}.{(new Date().getMonth()+1)}</button>
-                    <button>To {(new Date().getDate()+3)}.{(new Date().getMonth()+1)}</button>
-                    <button>Pe {(new Date().getDate()+4)}.{(new Date().getMonth()+1)}</button>
-                    <button>La {(new Date().getDate()+5)}.{(new Date().getMonth()+1)}</button>
-                    <button>Su {(new Date().getDate()+6)}.{(new Date().getMonth()+1)}</button>
+                    <p>{}</p>
+                    <button > {(new Date().getDate())}.{(new Date().getMonth()+1)}</button> 
+                    <button> {(new Date().getDate()+1)}.{(new Date().getMonth()+1)}</button>
+                    <button> {(new Date().getDate()+2)}.{(new Date().getMonth()+1)}</button>
+                    <button> {(new Date().getDate()+3)}.{(new Date().getMonth()+1)}</button>
+                    <button> {(new Date().getDate()+4)}.{(new Date().getMonth()+1)}</button>
+                    <button> {(new Date().getDate()+5)}.{(new Date().getMonth()+1)}</button>
+                    <button> {(new Date().getDate()+6)}.{(new Date().getMonth()+1)}</button>
                     <section id="saa">
                         <p>PVM</p>
                         {(new Date().getDate())}.{(new Date().getMonth()+1)}.{new Date().getFullYear()}

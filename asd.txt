@@ -1,4 +1,4 @@
-﻿openweather api
+openweather api
 de1abf67dd420d2455bc69e2ceb2a139
 
 showWeather reactiin
@@ -42,5 +42,53 @@ Json urlista
 Paikkatiedot, Google?
 Muotoilut
 
+<<<<<<< HEAD
 Kuva:
 var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");
+=======
+Mitään ei tuu ulos, inspect näyttää server erroria moment.min.js?
+
+AIzaSyBmXi9W_ZqeVFgyWYC_TLP8mrB7LBb5TrA
+
+
+/*{
+    "coord":{
+        "lon":25.73,
+        "lat":62.23},
+    "weather":[{
+        "id":500,
+        "main":"Rain",
+        "description":"light rain",
+        "icon":"10n"
+    }],
+    "base":"stations",
+    "main":{
+        "temp":1,
+        "pressure":1000,
+        "humidity":100,
+        "temp_min":1,
+        "temp_max":1
+    },
+    "visibility":10000,
+    "wind":{
+        "speed":3.6,
+        "deg":110
+    },
+    "clouds":{
+        "all":90
+    },
+    "dt":1511115600,
+    "sys":{"type":1,
+           "id":5025,
+           "message":0.0022,
+           "country":"FI",
+           "sunrise":1511073825,
+           "sunset":1511097652
+          },
+    "id":655194,
+    "name":"Jyvaeskylae",
+    "cod":200
+}
+
+*/
+>>>>>>> c38ac39cefd5fb40c7931f768dcf239e831fe6af
