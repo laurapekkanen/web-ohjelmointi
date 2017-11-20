@@ -24,7 +24,7 @@ var Weather = React.createClass({
             }.bind(this),
             error: function(xhr, status, err) {
                 console.log('VIRHE: ', status, err.toString());
-            }.bind(this),
+            }.bind(this)
         });
     },
     
@@ -43,14 +43,14 @@ var Weather = React.createClass({
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
-          Temp = <p>{this.state.datas.main.temp}</p> //celcius = -272.15
+          Temp = <p>{this.state.datas.main.temp}°C</p> //celcius = -272.15
         } else {
           Temp = null;
         }
         //humidity
         var Humi;
         if (this.state.datas !== undefined) {
-          Humi = <p>{this.state.datas.main.humidity}</p>
+          Humi = <p>{this.state.datas.main.humidity}%</p>
         } else {
           Humi = null;
         }
