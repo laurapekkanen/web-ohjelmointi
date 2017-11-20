@@ -48,3 +48,19 @@ var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather
 
 Json talot react:
 view-source:http://student.labranet.jamk.fi/~ara/jsvastaukset/07/t01/h06t06-solution.html
+
+$.ajax({
+            url: 'weather.json',
+            cache: false,
+            method: 'get',
+            dataType: 'json',
+            success: function(data) {
+                this.setState({datas: data});
+                console.log('JSON loaded');
+                //console.log(data);
+                //console.log(data.coord.lon);
+            }.bind(this),
+            error: function(xhr, status, err) {
+                console.log('VIRHE: ', status, err.toString());
+            }.bind(this)
+        });

@@ -11,20 +11,10 @@ var Weather = React.createClass({
     
     //hae json ajaxilla
     getWeather: function(){
-        $.ajax({
-            url: 'weather.json',
-            cache: false,
-            method: 'get',
-            dataType: 'json',
-            success: function(data) {
-                this.setState({datas: data});
-                console.log('JSON loaded');
-                //console.log(data);
-                //console.log(data.coord.lon);
-            }.bind(this),
-            error: function(xhr, status, err) {
-                console.log('VIRHE: ', status, err.toString());
-            }.bind(this)
+        var url = "http://api.openweathermap.org/data/2.5/weather?APPID=95983d94fe41bc5ebaa8e558b25e915f&q=Lahti,Finland&units=metric&cnt=7&lang=en";
+
+        $.getJSON(url, function(result){
+            console.log(result);
         });
     },
     
@@ -34,16 +24,16 @@ var Weather = React.createClass({
     },
     
     //pvm
-    thisDate: function(){
+    /*thisDate: function(){
       moment().format('dddd');  
-    },
+    },*/
     
     //piirrä nämä
     render: function() {
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
-          Temp = <p>{this.state.datas.main.temp}°C</p> //celcius = -272.15
+          Temp = <p>{this.state.datas.main.temp}°C</p> 
         } else {
           Temp = null;
         }
@@ -53,6 +43,14 @@ var Weather = React.createClass({
           Humi = <p>{this.state.datas.main.humidity}%</p>
         } else {
           Humi = null;
+        }
+        
+        var test;
+        if (this.state.result !== undefined) {
+          test = <p>{this.state.result.main.humidity}%</p>
+            console.log(test)
+        } else {
+          test = null;
         }
 
         return (
@@ -75,12 +73,12 @@ var Weather = React.createClass({
                         {Temp}
                         <p>Kosteus</p>
                         {Humi}
+                        {test}
                     </section>
                 </form>
             </div>
         );
     }
-
 });
 
 ReactDOM.render(
