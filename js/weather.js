@@ -30,6 +30,14 @@ var Weather = React.createClass({
     
     //piirrä nämä
     render: function() {
+           //weather
+        var Weat;
+        if (this.state.datas !== undefined) {
+          Weat = <p>{this.state.datas.weather.description}</p> 
+        } else {
+          Weat = null;
+        }
+        
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
@@ -69,6 +77,7 @@ var Weather = React.createClass({
                     <section id="saa">
                         <p>PVM</p>
                         {(new Date().getDate())}.{(new Date().getMonth()+1)}.{new Date().getFullYear()}
+                        {Weat}
                         <p>Lämpötila</p>
                         {Temp}
                         <p>Kosteus</p>

@@ -46,8 +46,97 @@ Aika
 Kuva:
 var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");
 
+<<<<<<< HEAD
+AIzaSyBmXi9W_ZqeVFgyWYC_TLP8mrB7LBb5TrA
+
+
+/*{
+    "coord":{
+        "lon":25.73,
+        "lat":62.23},
+    "weather":[{
+        "id":500,
+        "main":"Rain",
+        "description":"light rain",
+        "icon":"10n"
+    }],
+    "base":"stations",
+    "main":{
+        "temp":1,
+        "pressure":1000,
+        "humidity":100,
+        "temp_min":1,
+        "temp_max":1
+    },
+    "visibility":10000,
+    "wind":{
+        "speed":3.6,
+        "deg":110
+    },
+    "clouds":{
+        "all":90
+    },
+    "dt":1511115600,
+    "sys":{"type":1,
+           "id":5025,
+           "message":0.0022,
+           "country":"FI",
+           "sunrise":1511073825,
+           "sunset":1511097652
+          },
+    "id":655194,
+    "name":"Jyvaeskylae",
+    "cod":200
+}
+
+*/
+
+{
+	"coord": {
+		"lon": -0.13,
+		"lat": 51.51
+	},
+	"weather": [{
+		"id": 300,
+		"main": "Drizzle",
+		"description": "light intensity drizzle",
+		"icon": "09d"
+	}],
+	"base": "stations",
+	"main": {
+		"temp": 280.32,
+		"pressure": 1012,
+		"humidity": 81,
+		"temp_min": 279.15,
+		"temp_max": 281.15
+	},
+	"visibility": 10000,
+	"wind": {
+		"speed": 4.1,
+		"deg": 80
+	},
+	"clouds": {
+		"all": 90
+	},
+	"dt": 1485789600,
+	"sys": {
+		"type": 1,
+		"id": 5091,
+		"message": 0.0103,
+		"country": "GB",
+		"sunrise": 1485762037,
+		"sunset": 1485794875
+	},
+	"id": 2643743,
+	"name": "London",
+	"cod": 200
+}s
+Jkl data 5pv
+http://samples.openweathermap.org/data/2.5/forecast?id=655194&appid=b1b15e88fa797225412429c1c50c122a1
+=======
 Json talot react:
 view-source:http://student.labranet.jamk.fi/~ara/jsvastaukset/07/t01/h06t06-solution.html
+<<<<<<< HEAD
 
 $.ajax({
             url: 'weather.json',
@@ -64,3 +153,6 @@ $.ajax({
                 console.log('VIRHE: ', status, err.toString());
             }.bind(this)
         });
+=======
+>>>>>>> 33564bb34a34877213d68d9a7cef50862923d934
+>>>>>>> b12bc01ac5fabfb715a02c412c2ac9142f2c2068
