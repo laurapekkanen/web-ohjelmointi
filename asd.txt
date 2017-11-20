@@ -41,3 +41,6 @@ Buttoneille toiminta
 Json urlista
 Paikkatiedot, Google?
 Muotoilut
+
+Kuva:
+var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");
