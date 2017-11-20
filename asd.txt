@@ -38,9 +38,10 @@ sit kans tommonen: https://momentjs.com/
 Tehtävää:
 
 Buttoneille toiminta
-Json urlista
-Paikkatiedot, Google?
+Json urlista -> muuttujat + php
+Paikkatiedot, Google koordinaatit?
 Muotoilut
+Aika
 
 Kuva:
 var icon = ("<img src='http://openweathermap.org/img/w/" + weatherDataIn.weather[0].icon + ".png'>");
