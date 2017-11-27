@@ -1,7 +1,8 @@
 {
     "images": [
-{
-    "10d":"10d.png"
-}
+        {
+            "url": "10d.png",
+            "caption:" "Sateista"        
+        },
     ]
 }

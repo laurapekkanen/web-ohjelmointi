@@ -7,9 +7,6 @@ $(document).ready(function(){
         //syötetty kaupunki
         var city = $('#city').val();
         console.log(city);
-
-        
-
     
         //openweather 5 päivää json url
 
@@ -19,7 +16,8 @@ $(document).ready(function(){
         $.getJSON(url, function(result){
 
             console.log(result);
-             $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
+            $('#saa').append('<p src="weather.json">'+result.list[0+7].weather.icon+'</p>');
+            $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
             $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
 
             //console.log(result);
@@ -109,4 +107,7 @@ $(document).ready(function(){
     $('#neljas').append(moment().add(3, 'days').format('dddd'));
     $('#viides').append(moment().add(4, 'days').format('dddd'));
     
+    
+                                 
+        
 });
