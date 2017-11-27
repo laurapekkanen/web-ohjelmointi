@@ -15,7 +15,13 @@ $(document).ready(function(){
          
         });
     });
-    var fin = moment.locale();
+    var lang = moment('2017-03');
+    moment.locale('fi');    
+    console.log(lang.format('MMMM'));
+    var filang = moment('2017-03');
+    console.log(filang.format('MMMM'));
+    
+    
     $('#eka').append(moment().format('LL'));
     $('#toka').append(moment().add(1, 'days').format('dddd'));
     $('#kolmas').append(moment().add(2, 'days').format('dddd'));
