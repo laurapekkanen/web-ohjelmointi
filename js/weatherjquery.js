@@ -15,8 +15,8 @@ $(document).ready(function(){
             //tyhjennä vanhat tiedot
             $('#saa').empty();
             //tulostaa tiedot
-             $('#saa').append(city).css("text-transform","capitalize");
-             $('#saa').append(moment().format('dddd'));
+             $('#saa').append(city+'<br>').css("text-transform","capitalize");
+             $('#saa').append(moment().format('l'));
              $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
              $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
         });
@@ -25,11 +25,11 @@ $(document).ready(function(){
         $('#eka').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
+                //tyhjennä vanhat tiedot
+                $('#saa').empty();
                 //tulostaa tiedot
-                 $('#saa').append(city).css("text-transform","capitalize");
-                 $('#saa').append(moment().format('dddd'));
+                 $('#saa').append(city+'<br>').css("text-transform","capitalize");
+                 $('#saa').append(moment().format('l'));
                  $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
                  $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
             });
@@ -39,11 +39,11 @@ $(document).ready(function(){
         $('#toka').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
+                //tyhjennä vanhat tiedot
+                $('#saa').empty();
                 //tulostaa tiedot
-                 $('#saa').append(city).css("text-transform","capitalize");
-                 $('#saa').append(moment().add(1, 'days').format('dddd'));
+                 $('#saa').append(city+'<br>').css("text-transform","capitalize");
+                 $('#saa').append(moment().add(1, 'days').format('l'));
                  $('#saa').append('<p>Lämpötila '+result.list[0+8].main.temp+'°C</p>');
                  $('#saa').append('<p>Kosteus '+result.list[0+8].main.humidity+'%</p>');
             });
@@ -53,11 +53,11 @@ $(document).ready(function(){
         $('#kolmas').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
+                //tyhjennä vanhat tiedot
+                $('#saa').empty();
                 //tulostaa tiedot
-                 $('#saa').append(city).css("text-transform","capitalize");
-                 $('#saa').append(moment().add(2, 'days').format('dddd'));
+                 $('#saa').append(city+'<br>').css("text-transform","capitalize");
+                 $('#saa').append(moment().add(2, 'days').format('l'));
                  $('#saa').append('<p>Lämpötila '+result.list[0+16].main.temp+'°C</p>');
                  $('#saa').append('<p>Kosteus '+result.list[0+16].main.humidity+'%</p>');
             });
@@ -67,11 +67,11 @@ $(document).ready(function(){
         $('#neljas').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
+                //tyhjennä vanhat tiedot
+                $('#saa').empty();
                 //tulostaa tiedot
-                 $('#saa').append(city).css("text-transform","capitalize");
-                 $('#saa').append(moment().add(3, 'days').format('dddd'));
+                 $('#saa').append(city+'<br>').css("text-transform","capitalize");
+                 $('#saa').append(moment().add(3, 'days').format('l'));
                  $('#saa').append('<p>Lämpötila '+result.list[0+24].main.temp+'°C</p>');
                  $('#saa').append('<p>Kosteus '+result.list[0+24].main.humidity+'%</p>');
             });
@@ -81,28 +81,24 @@ $(document).ready(function(){
         $('#viides').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
+                //tyhjennä vanhat tiedot
+                $('#saa').empty();
                 //tulostaa tiedot
-                 $('#saa').append(city).css("text-transform","capitalize");
-                 $('#saa').append(moment().add(4, 'days').format('dddd'));
+                 $('#saa').append(city+'<br>').css("text-transform","capitalize");
+                 $('#saa').append(moment().add(4, 'days').format('l'));
                  $('#saa').append('<p>Lämpötila '+result.list[0+32].main.temp+'°C</p>');
                  $('#saa').append('<p>Kosteus '+result.list[0+32].main.humidity+'%</p>');
             });
         });
     });
-    
-    
-    
 
-    
     //moment js päivät
     moment.locale('fi');     
-    $('#eka').append(moment().format('LL'));
-    $('#toka').append(moment().add(1, 'days').format('dddd'));
-    $('#kolmas').append(moment().add(2, 'days').format('dddd'));
-    $('#neljas').append(moment().add(3, 'days').format('dddd'));
-    $('#viides').append(moment().add(4, 'days').format('dddd'));
+    $('#eka').append(moment().format('l'));
+    $('#toka').append(moment().add(1, 'days').format('l'));
+    $('#kolmas').append(moment().add(2, 'days').format('l'));
+    $('#neljas').append(moment().add(3, 'days').format('l'));
+    $('#viides').append(moment().add(4, 'days').format('l'));
     
     
     
