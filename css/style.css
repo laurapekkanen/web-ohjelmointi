@@ -43,6 +43,10 @@ header {
     margin-top: 60px;
 }
 
+header p {
+    font-size: 0.5em;
+}
+
 content {
     margin: 20px;
 }
