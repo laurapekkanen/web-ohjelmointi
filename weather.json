@@ -1,38 +1,8 @@
 {
-    "coord":{
-        "lon":25.73,
-        "lat":62.23},
-    "weather":[{
-        "id":500,
-        "main":"Rain",
-        "description":"light rain",
-        "icon":"10n"
-    }],
-    "base":"stations",
-    "main":{
-        "temp":1,
-        "pressure":1000,
-        "humidity":100,
-        "temp_min":1,
-        "temp_max":1
-    },
-    "visibility":10000,
-    "wind":{
-        "speed":3.6,
-        "deg":110
-    },
-    "clouds":{
-        "all":90
-    },
-    "dt":1511115600,
-    "sys":{"type":1,
-           "id":5025,
-           "message":0.0022,
-           "country":"FI",
-           "sunrise":1511073825,
-           "sunset":1511097652
-          },
-    "id":655194,
-    "name":"Jyvaeskylae",
-    "cod":200
+    "images": [
+        {
+            "url": "10d.png",
+            "caption:" "Sateista"        
+        },
+    ]
 }

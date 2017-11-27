@@ -7,10 +7,17 @@ $(document).ready(function(){
         console.log(city);
     
         //openweather 5 päivää json url
+
         var url ="http://api.openweathermap.org/data/2.5/forecast?q="+ city +"&units=metric&lang=en&APPID=de1abf67dd420d2455bc69e2ceb2a139"
 
         //hae json
         $.getJSON(url, function(result){
+
+            console.log(result);
+            $('#saa').append('<p src="weather.json">'+result.list[0+7].weather.icon+'</p>');
+            $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
+            $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
+
             //console.log(result);
             //tyhjennä vanhat tiedot
             $('#saa').empty();
@@ -18,6 +25,7 @@ $(document).ready(function(){
              $('#saa').append(city+'<br>').css("text-transform","capitalize");
              $('#saa').append(moment().format('l'));
              $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
+
              $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
         });
         
@@ -92,6 +100,14 @@ $(document).ready(function(){
         });
     });
 
+
+   var lang = moment('2017-03');
+    moment.locale('fi');    
+    console.log(lang.format('MMMM'));
+    var filang = moment('2017-03');
+    console.log(filang.format('MMMM'));
+
+
     //moment js päivät
     moment.locale('fi');     
     $('#eka').append(moment().format('l'));
@@ -101,5 +117,6 @@ $(document).ready(function(){
     $('#viides').append(moment().add(4, 'days').format('l'));
     
     
-    
+                                 
+        
 });
