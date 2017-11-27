@@ -14,7 +14,8 @@ $(document).ready(function(){
         //hae json
         $.getJSON(url, function(result){
             //console.log(result);
-
+            //tyhjennä vanhat tiedot
+            $('#saa').empty();
             //tulostaa tiedot
              $('#saa').append('<p>'+result.list[0].dt_txt+'</p>');
              $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
@@ -25,7 +26,8 @@ $(document).ready(function(){
         $('#eka').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-
+                    //tyhjennä vanhat tiedot
+                    $('#saa').empty();
                 //tulostaa tiedot
                  $('#saa').append('<p>'+result.list[0].dt_txt+'</p>');
                  $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
@@ -37,7 +39,8 @@ $(document).ready(function(){
         $('#toka').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-
+                    //tyhjennä vanhat tiedot
+                    $('#saa').empty();
                 //tulostaa tiedot
                  $('#saa').append('<p>'+result.list[0+8].dt_txt+'</p>');
                  $('#saa').append('<p>Lämpötila '+result.list[0+8].main.temp+'°C</p>');
@@ -49,7 +52,8 @@ $(document).ready(function(){
         $('#kolmas').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-
+                    //tyhjennä vanhat tiedot
+                    $('#saa').empty();
                 //tulostaa tiedot
                  $('#saa').append('<p>'+result.list[0+16].dt_txt+'</p>');
                  $('#saa').append('<p>Lämpötila '+result.list[0+16].main.temp+'°C</p>');
@@ -61,7 +65,8 @@ $(document).ready(function(){
         $('#neljas').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-
+                    //tyhjennä vanhat tiedot
+                    $('#saa').empty();
                 //tulostaa tiedot
                  $('#saa').append('<p>'+result.list[0+24].dt_txt+'</p>');
                  $('#saa').append('<p>Lämpötila '+result.list[0+24].main.temp+'°C</p>');
@@ -73,7 +78,8 @@ $(document).ready(function(){
         $('#viides').click(function(){
                 $.getJSON(url, function(result){
                 //console.log(result);
-
+                    //tyhjennä vanhat tiedot
+                    $('#saa').empty();
                 //tulostaa tiedot
                  $('#saa').append('<p>'+result.list[0+32].dt_txt+'</p>');
                  $('#saa').append('<p>Lämpötila '+result.list[0+32].main.temp+'°C</p>');
@@ -81,6 +87,8 @@ $(document).ready(function(){
             });
         });
     });
+    
+    
     
 
     
