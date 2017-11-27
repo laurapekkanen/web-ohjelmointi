@@ -8,11 +8,20 @@ $(document).ready(function(){
         $.getJSON(url, function(result){
             console.log(result);
 
-             $('#saa').append('<p>'+result.list[0].dt_txt+'</p>');
+             $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
             $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
              $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
 
          
         });
     });
+    var fin = moment.locale();
+    $('#eka').append(moment().format('LL'));
+    $('#toka').append(moment().add(1, 'days').format('dddd'));
+    $('#kolmas').append(moment().add(2, 'days').format('dddd'));
+    $('#neljas').append(moment().add(3, 'days').format('dddd'));
+    $('#viides').append(moment().add(4, 'days').format('dddd'));
+    
+    
+    
 });

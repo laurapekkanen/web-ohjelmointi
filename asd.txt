@@ -162,3 +162,5 @@ $.ajax({
 http://samples.openweathermap.org/data/2.5/forecast?id=655194&appid=b1b15e88fa797225412429c1c50c122a1
 
 Buttoneille id:t ja niille päivämäärät ja haku dt_txt mukaan? 
+oton sivu
+view-source:http://student.labranet.jamk.fi/~K2534/ttms0500/harjoitustyo/sovellus/ 
