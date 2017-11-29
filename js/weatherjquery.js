@@ -14,7 +14,7 @@ $(document).ready(function(){
         $.getJSON(url, function(result){
 
             console.log(result);
-            $('#saa').append('<p src="weather.json">'+result.list[0+7].weather.icon+'</p>');
+          
             $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
             $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
 
@@ -22,11 +22,12 @@ $(document).ready(function(){
             //tyhjennä vanhat tiedot
             $('#saa').empty();
             //tulostaa tiedot
-             $('#saa').append(city+'<br>').css("text-transform","capitalize");
-             $('#saa').append(moment().format('l'));
-             $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
+            $('#saa').append('<img src="http://openweathermap.org/img/w/" + result.list[0].weather.icon + ".png">');
+            $('#saa').append(city+'<br>').css("text-transform","capitalize");
+            $('#saa').append(moment().format('l'));
+            $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
 
-             $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
+            $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
         });
         
         //ensimmäinen päivä
