@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //kaupunki
+    //hae kaupunki
     $('#citybutton').click(function(){
         
         //syötetty kaupunki
@@ -7,13 +7,12 @@ $(document).ready(function(){
         console.log(city);
     
         //openweather 5 päivää json url
-
         var url ="http://api.openweathermap.org/data/2.5/forecast?q="+ city +"&units=metric&lang=en&APPID=de1abf67dd420d2455bc69e2ceb2a139"
 
         //hae json
         $.getJSON(url, function(result){
-
             console.log(result);
+            
             $('#saa').append('<p src="weather.json">'+result.list[0+7].weather.icon+'</p>');
             $('#saa').append('<p>'+result.list[0+7].dt_txt+'</p>');
             $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
@@ -38,7 +37,7 @@ $(document).ready(function(){
                 //tulostaa tiedot
                  $('#saa').append(city+'<br>').css("text-transform","capitalize");
                  $('#saa').append(moment().format('l'));
-                 $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>');
+                 $('#saa').append('<p>Lämpötila '+result.list[0].main.temp+'°C</p>'); //klo 12
                  $('#saa').append('<p>Kosteus '+result.list[0].main.humidity+'%</p>');
             });
         }); 
@@ -52,7 +51,7 @@ $(document).ready(function(){
                 //tulostaa tiedot
                  $('#saa').append(city+'<br>').css("text-transform","capitalize");
                  $('#saa').append(moment().add(1, 'days').format('l'));
-                 $('#saa').append('<p>Lämpötila '+result.list[0+8].main.temp+'°C</p>');
+                 $('#saa').append('<p>Lämpötila '+result.list[0+8].main.temp+'°C</p>'); //klo 12 + 24h
                  $('#saa').append('<p>Kosteus '+result.list[0+8].main.humidity+'%</p>');
             });
         });   
@@ -66,7 +65,7 @@ $(document).ready(function(){
                 //tulostaa tiedot
                  $('#saa').append(city+'<br>').css("text-transform","capitalize");
                  $('#saa').append(moment().add(2, 'days').format('l'));
-                 $('#saa').append('<p>Lämpötila '+result.list[0+16].main.temp+'°C</p>');
+                 $('#saa').append('<p>Lämpötila '+result.list[0+16].main.temp+'°C</p>'); //klo 12 + 48h
                  $('#saa').append('<p>Kosteus '+result.list[0+16].main.humidity+'%</p>');
             });
         }); 
@@ -80,7 +79,7 @@ $(document).ready(function(){
                 //tulostaa tiedot
                  $('#saa').append(city+'<br>').css("text-transform","capitalize");
                  $('#saa').append(moment().add(3, 'days').format('l'));
-                 $('#saa').append('<p>Lämpötila '+result.list[0+24].main.temp+'°C</p>');
+                 $('#saa').append('<p>Lämpötila '+result.list[0+24].main.temp+'°C</p>'); //klo 12 + 72h
                  $('#saa').append('<p>Kosteus '+result.list[0+24].main.humidity+'%</p>');
             });
         });
@@ -94,27 +93,27 @@ $(document).ready(function(){
                 //tulostaa tiedot
                  $('#saa').append(city+'<br>').css("text-transform","capitalize");
                  $('#saa').append(moment().add(4, 'days').format('l'));
-                 $('#saa').append('<p>Lämpötila '+result.list[0+32].main.temp+'°C</p>');
+                 $('#saa').append('<p>Lämpötila '+result.list[0+32].main.temp+'°C</p>'); //klo 12 + 96h
                  $('#saa').append('<p>Kosteus '+result.list[0+32].main.humidity+'%</p>');
             });
         });
     });
 
 
-   var lang = moment('2017-03');
+   /*var lang = moment('2017-03');
     moment.locale('fi');    
     console.log(lang.format('MMMM'));
     var filang = moment('2017-03');
-    console.log(filang.format('MMMM'));
+    console.log(filang.format('MMMM'));*/
 
 
     //moment js päivät
     moment.locale('fi');     
-    $('#eka').append(moment().format('l'));
-    $('#toka').append(moment().add(1, 'days').format('l'));
-    $('#kolmas').append(moment().add(2, 'days').format('l'));
-    $('#neljas').append(moment().add(3, 'days').format('l'));
-    $('#viides').append(moment().add(4, 'days').format('l'));
+    $('#eka').append(moment().format('dddd<br>l'));
+    $('#toka').append(moment().add(1, 'days').format('dddd<br>l'));
+    $('#kolmas').append(moment().add(2, 'days').format('dddd<br>l'));
+    $('#neljas').append(moment().add(3, 'days').format('dddd<br>l'));
+    $('#viides').append(moment().add(4, 'days').format('dddd<br>l'));
     
     
                                  
