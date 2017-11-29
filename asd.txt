@@ -1,4 +1,4 @@
-﻿openweather api
+openweather api
 de1abf67dd420d2455bc69e2ceb2a139
 
 showWeather reactiin
@@ -28,3 +28,5 @@ http://samples.openweathermap.org/data/2.5/forecast?id=655194&appid=b1b15e88fa79
 Buttoneille id:t ja niille päivämäärät ja haku dt_txt mukaan? 
 oton sivu
 view-source:http://student.labranet.jamk.fi/~K2534/ttms0500/harjoitustyo/sovellus/ 
+var ikoni = "https://openweathermap.org/img/w/ " + result.list[0].weather[0].icon + ".png'/>
+                $('#saa').append(ikoni);
