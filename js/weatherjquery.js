@@ -15,6 +15,7 @@ $(document).ready(function(){
                 $.getJSON(url, function(result){
                     console.log(result);
                     //$.ajaxSetup({ cache: true });
+
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                     //console.log(result);

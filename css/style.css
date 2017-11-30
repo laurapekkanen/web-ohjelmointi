@@ -114,6 +114,13 @@ article h2 {
 
 main {
      margin: 0 auto 60px auto;
+    width: 60%;
+    text-align: justify;
+}
+
+main h2 {
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 table {
