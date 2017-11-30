@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sää-palvelu</title>
+        <meta charset="utf-8"/>
+        <link href="css/style.css" rel="stylesheet"/>
+        <!--fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <!--React stuff-->
+            <!-- Main library-->
+            <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+            <!-- DOM -->
+            <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+            <!-- JSX -->
+            <script src="https://unpkg.com/babel-core@5.8.38/browser.min.js"></script>
+    </head>
+    
+    <body>
+        <page>
+            <nav>
+                <li><a href="document.html">Dokumentaatio</a></li>
+            </nav>
+            <header> Sääpalvelu
+                <p>Viiden päivän sää nopeasti ja helposti!</p>
+            </header>
+            <content id="root">
+                <p>Valitse paikkakunta</p>
+                <input placeholder="Valitse paikkakunta" id="city" autofocus/>
+                <button id="citybutton">Hae</button>
+                <p>Valitse päivämäärä</p><br>
+                <button id="eka"></button> 
+                <button id="toka"></button>
+                <button id="kolmas"></button>
+                <button id="neljas"></button>
+                <button id="viides"></button>
+                <article id="error"></article>
+                <section id="saa">
+                </section>
+            </content>
+        </page>
+        
+        <!--jQuery-->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <!--moments js -->
+        <script src="js/moment.min.js"></script>
+        <!--moment js suomi-->
+        <script src="js/fi.js"></script>
+        <!--react-->
+        <script type="text/babel" src="js/weatherreact.js"></script>
+        <!--own jquery-->
+        <!--<script type="text/javascript" src="js/weatherjquery.js"></script>-->
+    </body>
+</html>

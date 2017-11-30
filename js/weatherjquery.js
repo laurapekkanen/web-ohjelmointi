@@ -142,7 +142,7 @@ $(document).ready(function(){
                 $('#error').empty();
                 $('#error').append('<p>VALITSE ENSIN PAIKKAKUNTA</p>').css("font-weight","bold");
             }
-        
+        S
      });
 
         //moment js päivät   
