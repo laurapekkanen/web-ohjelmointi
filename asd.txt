@@ -30,3 +30,30 @@ oton sivu
 view-source:http://student.labranet.jamk.fi/~K2534/ttms0500/harjoitustyo/sovellus/ 
 var ikoni = "https://openweathermap.org/img/w/ " + result.list[0].weather[0].icon + ".png'/>
                 $('#saa').append(ikoni);
+                
+                
+- Buttonin boldaus kun se on aktiivinen?
+- Dokumentin muotoilu
+- getJSON kuntoon? jos toimii niin dokkari kuntoon
+- react toimimaan omalle sivulle ja sen linkkaus dokkariin
+
+Resurssit
+-ilmatieteenlaitos
+-github
+-react
+    -ajax
+    -render
+    -initial state
+-json-tiedon hakeminen
+-openweather-dataan tutustuminen
+-moment.js
+-css
+-ikonit
+-koodin siistiminen
+-raportti
+-kaupungin nollaus
+-haun nollaus
+-getJSON
+-buttonien toiminta
+-id error
+-googlemaps

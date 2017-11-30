@@ -102,6 +102,10 @@ section p {
     letter-spacing: 0.3em;
 }
 
+main {
+     margin: 0 auto 60px auto;
+}
+
 table {
     border-collapse: collapse;
     width: 80%;

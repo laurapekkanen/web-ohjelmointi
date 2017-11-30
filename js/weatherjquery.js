@@ -14,10 +14,7 @@ $(document).ready(function(){
                 $.ajaxSetup({ cache: false });
                 $.getJSON(url, function(result){
                     console.log(result);
-<<<<<<< HEAD
                     //$.ajaxSetup({ cache: true });
-=======
->>>>>>> feff9eeec790da0a64af623604cc7706ad6f432f
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                     //console.log(result);
@@ -144,7 +141,7 @@ $(document).ready(function(){
                 $('#error').empty();
                 $('#error').append('<p>VALITSE ENSIN PAIKKAKUNTA</p>').css("font-weight","bold");
             }
-        
+        S
      });
 
         //moment js päivät   
