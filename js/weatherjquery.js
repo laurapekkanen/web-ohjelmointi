@@ -1,4 +1,5 @@
 $(document).ready(function(){
+   
     //hae kaupunki
     $('#citybutton').click(function(){
         //nollaa kaupunki??
@@ -9,24 +10,22 @@ $(document).ready(function(){
         if (city != "") {
                 //openweather 5 päivää json url
                 var url ="http://api.openweathermap.org/data/2.5/forecast?q="+ city +"&units=metric&lang=fi&APPID=de1abf67dd420d2455bc69e2ceb2a139"
-
                 //hae json
                 $.getJSON(url, function(result){
                     console.log(result);
-
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                     //console.log(result);
-                    //tyhjennä vanhat tiedot
-                    $('#saa').empty();
-                    $('#error').empty();
-                    //tulostaa tiedot
-                    $('#saa').append('<img src="https://openweathermap.org/img/w/'+ result.list[0].weather[0].icon+'.png"/>');
-                    $('#saa').append('<p><b>'+city+'</b></p>');
-                    $('#saa').append('<p><b>'+moment().format('l')+'</b></p>');
-                    $('#saa').append('<p>Lämpötila: <b>'+result.list[0].main.temp+'°C</b></p>');
-                    $('#saa').append('<p>Kosteus: <b>'+result.list[0].main.humidity+'%</b></p>');
-                    $('#saa').append('<p>Kuvaus: <b>'+result.list[0].weather[0].description+'</b></p>');
+                        //tyhjennä vanhat tiedot
+                        $('#saa').empty();
+                        $('#error').empty();
+                        //tulostaa tiedot
+                        $('#saa').append('<img src="https://openweathermap.org/img/w/'+ result.list[0].weather[0].icon+'.png"/>');
+                        $('#saa').append('<p><b>'+city+'</b></p>');
+                        $('#saa').append('<p><b>'+moment().format('l')+'</b></p>');
+                        $('#saa').append('<p>Lämpötila: <b>'+result.list[0].main.temp+'°C</b></p>');
+                        $('#saa').append('<p>Kosteus: <b>'+result.list[0].main.humidity+'%</b></p>');
+                        $('#saa').append('<p>Kuvaus: <b>'+result.list[0].weather[0].description+'</b></p>');
                 });
 
                 //ensimmäinen päivä
@@ -59,6 +58,7 @@ $(document).ready(function(){
                         //tyhjennä vanhat tiedot
                         $('#saa').empty();
                         $('#error').empty();
+                        
                         //tulostaa tiedot
                         $('#saa').append('<img src="https://openweathermap.org/img/w/'+ result.list[0+8].weather[0].icon+'.png"/>');
                         $('#saa').append('<p><b>'+city+'</b></p>');
@@ -144,7 +144,4 @@ $(document).ready(function(){
         $('#neljas').append(moment().add(3, 'days').format('dddd<br>l')).css('text-transform', 'capitalize');
         $('#viides').append(moment().add(4, 'days').format('dddd<br>l')).css('text-transform', 'capitalize');
     
-    
-                                 
-        
 });
