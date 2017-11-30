@@ -36,7 +36,7 @@ var Weather = React.createClass({
     
     //piirrä nämä
     render: function() {
-           //weather
+        //weather
         var Weat;
         if (this.state.datas !== undefined) {
           Weat = <p>{this.state.datas.weather.description}</p> 
@@ -47,7 +47,7 @@ var Weather = React.createClass({
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
-          Temp = <p>{this.state.datas.main.temp}°C</p> 
+          Temp = <p>{this.state.datas.main.temp}K</p> 
         } else {
           Temp = null;
         }
@@ -77,7 +77,7 @@ var Weather = React.createClass({
                         {Temp}
                         <p>Kosteus</p>
                         {Humi}
-                        {test}
+                        
                     </section>
                 </form>
             </div>
