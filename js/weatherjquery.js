@@ -11,9 +11,10 @@ $(document).ready(function(){
                 var url ="http://api.openweathermap.org/data/2.5/forecast?q="+ city +"&units=metric&lang=fi&APPID=de1abf67dd420d2455bc69e2ceb2a139"
 
                 //hae json
+                $.ajaxSetup({ cache: false });
                 $.getJSON(url, function(result){
                     console.log(result);
-
+                    //$.ajaxSetup({ cache: true });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                     //console.log(result);
@@ -31,6 +32,7 @@ $(document).ready(function(){
 
                 //ensimmäinen päivä
                 $('#eka').click(function(){
+                    $.ajaxSetup({ cache: false });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                         $.getJSON(url, function(result){
@@ -52,6 +54,7 @@ $(document).ready(function(){
 
                 //toinen päivä
                 $('#toka').click(function(){
+                    $.ajaxSetup({ cache: false });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                         $.getJSON(url, function(result){
@@ -72,6 +75,7 @@ $(document).ready(function(){
 
                 //kolmas päivä
                 $('#kolmas').click(function(){
+                    $.ajaxSetup({ cache: false });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                         $.getJSON(url, function(result){
@@ -92,6 +96,7 @@ $(document).ready(function(){
 
                 //neljäs päivä
                 $('#neljas').click(function(){
+                    $.ajaxSetup({ cache: false });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                         $.getJSON(url, function(result){
@@ -112,6 +117,7 @@ $(document).ready(function(){
 
                 //viides päivä
                 $('#viides').click(function(){
+                    $.ajaxSetup({ cache: false });
                     //uudestaan tässä, jotta ei poimi kaikkia syötettyjä kaupunkeja
                     var city = $('#city').val(); 
                         $.getJSON(url, function(result){
