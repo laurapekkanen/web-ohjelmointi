@@ -25,6 +25,13 @@ $(document).ready(function(){
                     $('#saa').append('<p>Lämpötila: <b>'+result.list[0].main.temp+'°C</b></p>');
                     $('#saa').append('<p>Kosteus: <b>'+result.list[0].main.humidity+'%</b></p>');
                     $('#saa').append('<p>Kuvaus: <b>'+result.list[0].weather[0].description+'</b></p>');
+                    //korosta valinta
+                    $('#eka').addClass('activated');
+                    $('#toka').removeClass('activated');
+                    $('#kolmas').removeClass('activated');
+                    $('#neljas').removeClass('activated');
+                    $('#viides').removeClass('activated');
+                    
                     
                     //ensimmäinen päivä
                     $('#eka').click(function(){
@@ -43,6 +50,13 @@ $(document).ready(function(){
                         $('#saa').append('<p>Kosteus: <b>'+result.list[0].main.humidity+'%</b></p>');
                         $('#saa').append('<p>Kuvaus: <b>'+result.list[0].weather[0].description+'</b></p>');
                         console.log(city);
+                        //korosta valinta
+                        $('#eka').addClass('activated');
+                        //poista muista
+                        $('#toka').removeClass('activated');
+                        $('#kolmas').removeClass('activated');
+                        $('#neljas').removeClass('activated');
+                        $('#viides').removeClass('activated');
                     }); 
                     
                     //toinen päivä
@@ -61,6 +75,13 @@ $(document).ready(function(){
                         $('#saa').append('<p>Kosteus: <b>'+result.list[0+8].main.humidity+'%</b></p>');
                         $('#saa').append('<p>Kuvaus: <b>'+result.list[0+8].weather[0].description+'</b></p>');
                         console.log(city);
+                        //korosta valinta
+                        $('#toka').addClass('activated');
+                        //poista muista
+                        $('#eka').removeClass('activated');
+                        $('#kolmas').removeClass('activated');
+                        $('#neljas').removeClass('activated');
+                        $('#viides').removeClass('activated');
                     });   
 
                     //kolmas päivä
@@ -79,6 +100,13 @@ $(document).ready(function(){
                         $('#saa').append('<p>Kosteus: <b>'+result.list[0+16].main.humidity+'%</b></p>');
                         $('#saa').append('<p>Kuvaus: <b>'+result.list[0+16].weather[0].description+'</b></p>');
                         console.log(city);
+                        //korosta valinta
+                        $('#kolmas').addClass('activated');
+                        //poista muista
+                        $('#eka').removeClass('activated');
+                        $('#toka').removeClass('activated');
+                        $('#neljas').removeClass('activated');
+                        $('#viides').removeClass('activated');
                     }); 
 
                     //neljäs päivä
@@ -97,6 +125,13 @@ $(document).ready(function(){
                         $('#saa').append('<p>Kosteus: <b> '+result.list[0+24].main.humidity+'%</b></p>');
                         $('#saa').append('<p>Kuvaus: <b>'+result.list[0+24].weather[0].description+'</b></p>');
                          console.log(city);
+                        //korosta valinta
+                        $('#neljas').addClass('activated');
+                        //poista muista
+                        $('#eka').removeClass('activated');
+                        $('#toka').removeClass('activated');
+                        $('#kolmas').removeClass('activated');
+                        $('#viides').removeClass('activated');
                     });
 
                     //viides päivä
@@ -115,6 +150,13 @@ $(document).ready(function(){
                         $('#saa').append('<p>Kosteus: <b>'+result.list[0+32].main.humidity+'%</b></p>');
                         $('#saa').append('<p>Kuvaus: <b>'+result.list[0+32].weather[0].description+'</b></p>');
                         console.log(city);
+                        //korosta valinta
+                        $('#viides').addClass('activated');
+                        //poista muista
+                        $('#eka').removeClass('activated');
+                        $('#toka').removeClass('activated');
+                        $('#kolmas').removeClass('activated');
+                        $('#neljas').removeClass('activated');
                     });
                     
                 });

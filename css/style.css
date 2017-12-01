@@ -71,7 +71,11 @@ button {
 button:hover {
     box-shadow: 5px 5px 5px #d9d9d9;
     border-radius: 10px;
-    background-color: lightgrey;
+    background-color: darkgray;
+}
+
+button:active, .activated {
+    background-color: darkgray;
 }
 
 section {
