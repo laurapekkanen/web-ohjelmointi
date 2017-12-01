@@ -32,10 +32,10 @@ var ikoni = "https://openweathermap.org/img/w/ " + result.list[0].weather[0].ico
                 $('#saa').append(ikoni);
                 
                 
-- Buttonin boldaus kun se on aktiivinen?
+- Buttonin boldaus kun se on aktiivinen? DONE
 - Dokumentin muotoilu
-- getJSON kuntoon? jos toimii niin dokkari kuntoon
-- react toimimaan omalle sivulle ja sen linkkaus dokkariin
+- getJSON kuntoon? jos toimii niin dokkari kuntoon DONE
+- react toimimaan omalle sivulle ja sen linkkaus dokkariin DONE
 
 Resurssit
 -ilmatieteenlaitos
