@@ -96,6 +96,7 @@ section h1, h2 {
     text-transform: uppercase;
     text-shadow: 2px 2px #e7e7e7;
     letter-spacing: 0.3em;
+    margin-bottom: 20px;
 }
 
 
@@ -112,8 +113,14 @@ article {
     margin: 20px;
 }
 
-article h2 {
+article h3 {
     padding: 30px auto 30px auto;
+    margin: 20px auto;
+}
+
+
+article p {
+    margin-bottom: 10px;
 }
 
 main {

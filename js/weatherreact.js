@@ -47,7 +47,7 @@ var Weather = React.createClass({
         //temperature
         var Temp;
         if (this.state.datas !== undefined) {
-          Temp = <p>{this.state.datas.main.temp}K</p> 
+          Temp = <p>{this.state.datas.main.temp}°C</p> 
         } else {
           Temp = null;
         }
@@ -57,6 +57,13 @@ var Weather = React.createClass({
           Humi = <p>{this.state.datas.main.humidity}%</p>
         } else {
           Humi = null;
+        }
+        
+        var Name;
+        if (this.state.datas !== undefined) {
+          Name = <p>{this.state.datas.name}</p>
+        } else {
+          Name = null;
         }
         
         return (
@@ -71,6 +78,8 @@ var Weather = React.createClass({
                     <button> {(moment().add(4, 'days').format('dddd l'))}</button>
                     <section id="saa">
                         <p>Paikallisesta JSONista haetut tiedot:</p>
+                        
+                        {Name}
 
                         {Weat}
                         <p>Lämpötila</p>
